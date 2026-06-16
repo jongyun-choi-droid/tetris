@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a2e;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #a0a0b8;
+  font-size: 0.95rem;
+}
+
+.game-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.board-section {
+  background-color: #16213e;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #0f3460;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 24px);
+  grid-template-rows: repeat(20, 24px);
+  gap: 1px;
+  background-color: #0a0a14;
+  padding: 4px;
+}
+
+.cell {
+  width: 24px;
+  height: 24px;
+  background-color: #1e2a4a;
+  border: 1px solid #2a3a5c;
+  border-radius: 2px;
+}
+
+.cell.filled {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cell.piece-i {
+  background-color: #4cc9f0;
+  border-color: #3ab4d9;
+}
+
+.cell.piece-o {
+  background-color: #f9e547;
+  border-color: #e0cf3f;
+}
+
+.cell.piece-t {
+  background-color: #b565d8;
+  border-color: #9f55c0;
+}
+
+.cell.piece-s {
+  background-color: #57cc99;
+  border-color: #45b585;
+}
+
+.cell.piece-z {
+  background-color: #e94560;
+  border-color: #d63851;
+}
+
+.cell.piece-j {
+  background-color: #4a7fd4;
+  border-color: #3d6fbf;
+}
+
+.cell.piece-l {
+  background-color: #f4a261;
+  border-color: #e09255;
+}
+
+.side-panel {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-box {
+  background-color: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.info-box h2 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #a0a0b8;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4cc9f0;
+}
+
+.game-status {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #c8c8d8;
+}
+
+.game-status.is-playing {
+  color: #57cc99;
+}
+
+.game-status.is-game-over {
+  color: #e94560;
+  font-weight: bold;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #e94560;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #d63851;
+}
+
+button:active {
+  background-color: #c42f48;
+}
+
+.controls-guide ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.controls-guide li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 2px 6px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  text-align: center;
+  background-color: #0f3460;
+  border: 1px solid #2a3a5c;
+  border-radius: 4px;
+}
